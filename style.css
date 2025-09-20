@@ -69,7 +69,7 @@ h2 {
 }
 
 .project-image {
-    flex: 0 0 500px;
+    flex: 0 0 600px;
     overflow: hidden;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -208,3 +208,4 @@ footer {
     background: #E57200;
     box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
+
