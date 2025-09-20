@@ -1,77 +1,14 @@
-/* Reset + Fonts */
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  background: #f5f5f5; /* light gray background */
-  color: #333;
-}
-
-/* Header */
-header {
-  background: #122e1b; /* dark green */
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid white;
-  margin-bottom: 1rem;
-}
-
-header h1 {
-  margin: 0.2rem 0;
-  font-size: 2.5rem;
-}
-
-header p {
-  margin: 0.5rem 0;
-}
-
-nav a {
-  color: #a0c49d; /* lighter green */
-  text-decoration: none;
-  margin: 0 0.8rem;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Sections */
-section {
-  padding: 2rem 10%;
-}
-
-section h2 {
-  border-bottom: 2px solid #2f4f4f;
-  padding-bottom: 0.5rem;
-}
-
-/* Projects Layout */
-.projects-featured,
-.projects-medium,
-.projects-early {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
+/* Clickable Boxes General */
 .project-card {
+  display: flex;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 1rem;
-  transition: transform 0.2s, box-shadow 0.2s;
   text-decoration: none;
   color: inherit;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .project-card:hover {
@@ -79,55 +16,29 @@ section h2 {
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-.project-card img {
-  width: 100%;
-  border-radius: 5px;
-  margin-bottom: 0.5rem;
-}
-
 .project-card.large {
-  flex: 1 1 100%;
-  max-width: 800px;
+  flex-direction: row;
 }
 
-.project-card.medium {
-  flex: 1 1 calc(50% - 1.5rem);
-  max-width: 400px;
+.project-card.large img {
+  width: 40%;
+  object-fit: cover;
+}
+
+.project-card.large .project-text {
+  padding: 1.5rem;
+  flex: 1;
 }
 
 .project-card.small {
-  flex: 1 1 200px;
-  max-width: 200px;
-}
-
-/* Skills */
-#skills ul {
-  list-style: none;
-  padding: 0;
-}
-
-#skills li {
-  background: #eee;
-  margin: 0.3rem 0;
-  padding: 0.5rem;
-  border-radius: 5px;
-}
-
-/* Footer */
-footer {
+  flex-direction: column;
   text-align: center;
   padding: 1rem;
-  background: #2f4f4f;
-  color: white;
 }
 
-/* Responsive */
-@media(max-width: 768px) {
-  .project-card.medium, .project-card.large {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-  section {
-    padding: 2rem 5%;
-  }
+.project-card.small img {
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 5px;
 }
