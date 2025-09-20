@@ -1,44 +1,55 @@
-/* Clickable Boxes General */
-.project-card {
+/* Small Project Cards (Foundational Work) */
+.projects-small {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.project-card.small {
+  flex: 1 1 250px; /* grow/shrink, minimum width 250px */
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   text-decoration: none;
   color: inherit;
-  margin-bottom: 1.5rem;
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
-
-.project-card.large {
-  flex-direction: row;
-}
-
-.project-card.large img {
-  width: 40%;
-  object-fit: cover;
-}
-
-.project-card.large .project-text {
-  padding: 1.5rem;
-  flex: 1;
-}
-
-.project-card.small {
-  flex-direction: column;
-  text-align: center;
   padding: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .project-card.small img {
   margin-top: 0.5rem;
   width: 100%;
-  max-width: 250px;
+  height: auto;
   border-radius: 5px;
+}
+
+.project-card.small:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive Adjustments */
+@media(max-width: 768px) {
+  /* Large project boxes stack vertically on mobile */
+  .project-card.large {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-card.large img {
+    width: 100%;
+    max-height: 250px;
+  }
+
+  .project-card.large .project-text {
+    padding: 1rem;
+  }
+
+  /* Small project cards already flexible, will wrap nicely */
 }
