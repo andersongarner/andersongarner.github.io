@@ -25,18 +25,22 @@ header {
 }
 
 .profile-box {
-    flex-shrink: 0;
-    width: 100px;
+    width: 100px;           /* box size */
     height: 100px;
-    overflow: hidden;
     border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    flex-shrink: 0;         /* prevent stretching */
 }
 
 .profile-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%;            /* force image to fill box width */
+    height: 100%;           /* force image to fill box height */
+    object-fit: cover;      /* crop any overflow cleanly */
+    display: block;
 }
 
 .name-tagline h1 {
