@@ -174,3 +174,37 @@ footer {
         border-radius: 0 0 15px 15px;
     }
 }
+
+
+/* 404 Page Styling */
+.error-container {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.error-container h1 {
+    font-size: 6rem;
+    margin-bottom: 20px;
+    color: #E57200;
+}
+
+.error-container p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.back-home {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #E57200;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.back-home:hover {
+    background: #E57200;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
