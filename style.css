@@ -181,7 +181,7 @@ footer {
 
 /* Hero banner */
 .project-hero {
-    max-width: 1000px;
+    max-height: 750px;
     margin: 20px auto;
     border-radius: 15px;
     overflow: hidden;
