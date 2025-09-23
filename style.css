@@ -106,14 +106,6 @@ h2 {
   text-align: center; /* centers the h2 */
 }
 
-#about h2 {
-  color: #1e2a38;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #E57200;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
 .about-box {
   background: #fff;
   border-radius: 12px;
