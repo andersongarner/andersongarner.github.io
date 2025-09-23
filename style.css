@@ -125,7 +125,7 @@ h2 {
     height: 500px;
     object-fit: cover;
     margin-top: 10px;
-    border-radius: 0 0 15px 15px;
+    border-radius: 15px;
 }
 
 .foundational:hover {
@@ -199,6 +199,7 @@ footer {
     width: auto;
     height: auto;
     margin: 0 auto;
+    border-radius: 15px;
 }
 
 /* Summary section (quick bullets, role, tools) */
