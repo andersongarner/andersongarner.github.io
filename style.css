@@ -175,6 +175,89 @@ footer {
     }
 }
 
+/* ============================= */
+/* Project Detail Page Additions */
+/* ============================= */
+
+/* Hero banner */
+.project-hero {
+    max-width: 1000px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.project-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Summary section (quick bullets, role, tools) */
+.project-summary {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.project-summary h2 {
+    margin-top: 0;
+    color: #E57200;
+}
+
+.project-summary ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-summary li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.project-summary li::before {
+    content: "•";
+    color: #E57200;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Detailed writeup */
+.project-details {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    line-height: 1.7;
+}
+
+.project-details h2 {
+    color: #1e2a38;
+    margin-top: 30px;
+    border-bottom: 2px solid #E57200;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Back link at bottom */
+footer a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+footer a:hover {
+    opacity: 0.85;
+}
+
+
 
 /* 404 Page Styling */
 .error-container {
