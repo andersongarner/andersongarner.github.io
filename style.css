@@ -300,3 +300,20 @@ footer a:hover {
     box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
+
+.download-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
