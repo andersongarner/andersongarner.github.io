@@ -13,57 +13,141 @@
   <p>August 2024 – Present</p>
 </header>
 
-<section class="project-hero">
-  <img src="../images/airbrakes.jpg" alt="Airbrakes system on rocket">
-</section>
+<div class="hero-wrapper">
+  <section class="project-hero">
+    <img src="../images/airbrakes.jpg" alt="Airbrakes system on rocket">
+  </section>
+</div>
 
 <section class="project-summary">
   <h2>Project Overview</h2>
   <p>
     Led the design and development of an active airbrakes system for UVA Rocketry’s 2025 IREC entry, 
-    contributing to the team’s <strong>1st Place finish</strong> in the 10k COTS category. 
+    enabling precise altitude control for the 10k COTS competition. 
+    The subsystem actively modulates aerodynamic drag during flight, addressing variability in motor performance, 
+    atmospheric conditions, and manufacturing tolerances.
   </p>
   <p>
-    Currently guiding the next-generation system with enhanced design precision and manufacturability.
+    Oversaw the mechanical, electrical, and software integration of the system, ensuring modularity, 
+    robustness, and ease of testing while simultaneously mentoring 29 sub-team members in advanced aerospace engineering practices.
   </p>
   <ul>
-    <li><strong>Role:</strong> Sub-team Lead (managing 29 members)</li>
-    <li><strong>Tools:</strong> SolidWorks, ANSYS Fluent, CNC machining</li>
+    <li><strong>Role:</strong> Sub-team Lead – directing multi-disciplinary design, testing, and simulation</li>
+    <li><strong>Tools:</strong> SolidWorks, ANSYS Fluent, RocketPy, CNC machining, Altium Designer</li>
     <li><strong>Key Outcome:</strong> 1st Place, IREC 10k COTS Category (2025)</li>
+    <li><strong>Scale:</strong> Full-scale active drag subsystem integrated into a 10,000 ft class rocket</li>
   </ul>
 </section>
 
 <section class="project-details">
+
   <h2>Challenge</h2>
   <p>
-    The rocket required an active drag-control system to reliably target a 10,000 ft apogee. 
-    The mechanism needed to be lightweight, structurally sound, and manufacturable under strict deadlines.
+    Achieving precise apogee control required an active drag system to modulate descent trajectory while minimizing structural mass. 
+    The design needed to be compact, robust, and manufacturable using in-house resources within strict competition timelines. 
+    Additional constraints included ensuring dynamic stability, reliable electronic control, and fail-safe mechanisms in the event of servo or power failure.
+  </p>
+  <p>
+    Variability in launch site conditions—including atmospheric density, pressure, and temperature—required the system to function reliably across multiple flight profiles.
   </p>
 
-  <h2>Approach</h2>
+  <h2>Mechanical Design</h2>
+  <h3>Configuration Selection</h3>
   <p>
-    I directed the mechanical design effort, creating detailed SolidWorks models 
-    and performing FEA simulations to validate structural performance. 
-    To meet deployment requirements, I developed a custom curved cam surface 
-    that ensured a linear relationship between actuator rotation and fin extension.
+    Two actuation strategies were considered: external deployable flaps versus internal retractable petals. 
+    Flaps were simpler in moving parts but introduced aerodynamic complexity and risk of structural compromise. 
+    Petals, in contrast, stowed within the coupler tube, maintained aerodynamic symmetry during thrust, and distributed drag evenly during the coast phase.
+  </p>
+  <p>
+    The final design uses <strong>three radially-deployed petals</strong> aligned with the rocket’s fins, ensuring predictable aerodynamic behavior while minimizing the overall profile.
   </p>
 
-  <h2>Results</h2>
+  <h3>Deployment Mechanism</h3>
   <p>
-    Due to environmental changes at the competition site (lower elevation and higher air density) 
-    and increased rocket mass, the system was not deployed to full capability. 
-    Nevertheless, the design’s rigor and documentation significantly boosted our technical evaluation scores, 
-    securing a <strong>1st Place finish</strong> in the IREC 10k COTS category.
+    The petals are actuated by a cam-driven system that converts rotational motion from a high-torque servo into linear extension. 
+    This approach was chosen over lever- and gear-based mechanisms due to its combination of compactness, repeatability, and linearity. 
+    The cam slots were parameterized and optimized using Desmos to ensure a <strong>linear extension rate</strong>, simplifying control and simulation.
+  </p>
+  <p>
+    A spring-powered retraction system provides fail-safe behavior: when electronics fail, petals automatically retract to a neutral position. 
+    The retraction torque is adjustable through 3D-printed pre-load disks, allowing precise balancing with the servo torque.
   </p>
 
-  <h2>Reflection</h2>
+  <h3>Structural Integration</h3>
   <p>
-    This project reinforced the value of precise technical communication across sub-teams 
-    and highlighted the trade-offs between simulation fidelity and manufacturing feasibility.
+    The system is housed entirely within the aft coupler tube. Mechanical components include:
+  </p>
+  <ul>
+    <li>Base and servo plates waterjet-cut from 6061 aluminum for stiffness and lightweight design</li>
+    <li>3D-printed ABS electronics shelf to isolate PCB from conductive surfaces</li>
+    <li>Linear guide rails and ball-bearing carriages for smooth petal motion</li>
+    <li>Low-profile aluminum stringers with locking tabs and cotter pins for secure assembly</li>
+  </ul>
+  <p>
+    The design was verified through static load calculations and FEA: the stringer assembly has a factor of safety of 6.25 under maximum expected loads (20 lbs at 10g), considering potential shear and tension failure modes.
+  </p>
+
+  <h2>Electronics & Control</h2>
+  <h3>PCB & Sensors</h3>
+  <p>
+    A custom four-layer PCB integrates IMU, barometer, servo driver, telemetry (LoRa), and microSD data logging. 
+    High-current components, including a Sincecam 60 kg servo, are isolated from low-power sensors to maintain stable operation.
+  </p>
+
+  <h3>Software & Flight Logic</h3>
+  <p>
+    Airbrakes deployment is governed by a state-machine with PID control. Transition points are based on IMU acceleration data, barometric altitude, and pre-computed OpenRocket simulations. 
+    The system can deploy airbrakes only after motor burnout or a minimum altitude (6,500 ft AGL) per competition rules.
+  </p>
+  <p>
+    Flight simulations were conducted using RocketPy to validate deployment timing and predict apogee under varying drag conditions. 
+    The software logs data to a microSD card and streams telemetry to the ground station in real time.
+  </p>
+
+  <h2>Aerodynamics & Simulation</h2>
+  <p>
+    CFD simulations in ANSYS Fluent were used to generate drag coefficient tables across multiple velocity and altitude conditions. 
+    Both stowed and deployed states were modeled to predict the impact on trajectory. 
+    Meshes were generated from CAD models and refined to capture pressure contours at leading edges and petal surfaces.
+  </p>
+  <p>
+    Automated scripts using PyAnsys facilitated drag coefficient extraction for use in flight software, reducing manual error and improving simulation repeatability.
+  </p>
+
+  <h2>Results & Performance</h2>
+  <p>
+    Although environmental factors and last-minute motor changes prevented airbrakes deployment during IREC 2025, the system was fully validated mechanically and electronically. 
+    The thorough documentation and simulation rigor contributed to a 1st Place finish in the 10k COTS category.
+  </p>
+  <p>
+    Key outcomes include:
+  </p>
+  <ul>
+    <li>Linear cam-driven actuation achieved predictable extension for all test configurations</li>
+    <li>Spring-powered retraction validated as reliable fail-safe under simulated power loss</li>
+    <li>CFD-informed drag tables provided critical insight for future active drag control strategies</li>
+    <li>Integrated PCB and flight software confirmed robust telemetry and data logging under high-dynamic conditions</li>
+  </ul>
+
+  <h2>Reflection & Lessons Learned</h2>
+  <p>
+    This project reinforced the importance of:
+  </p>
+  <ul>
+    <li><strong>Early subsystem integration:</strong> Changes in propulsion or launch environment can cascade into dependent subsystems</li>
+    <li><strong>Environmental contingency planning:</strong> Accounting for altitude, pressure, and temperature variation is critical for active drag systems</li>
+    <li><strong>Simple, robust design:</strong> Low part count, modular assemblies, and straightforward actuation mechanisms reduce failure risk and streamline testing</li>
+    <li><strong>Simulation-informed design:</strong> CFD and RocketPy integration allows precise prediction of deployment impact and informs control logic</li>
+  </ul>
+  <p>
+    The cam-driven petal system provides a strong baseline for future iterations, balancing mechanical simplicity, reliability, and flight performance.
   </p>
 </section>
 
 <footer>
-    <p>Charlottesville, VA | (863) 712-5400 | <a href="mailto:zyf5jh@virginia.edu">Email</a> | <a href="https://www.linkedin.com/in/andersongarner">LinkedIn</a></p>
-    <p>&copy; 2025 Anderson Garner</p>
+  <p>Charlottesville, VA | (863) 712-5400 | <a href="mailto:zyf5jh@virginia.edu">Email</a> | <a href="https://www.linkedin.com/in/andersongarner">LinkedIn</a></p>
+  <p>&copy; 2025 Anderson Garner</p>
 </footer>
+
+</body>
+</html>

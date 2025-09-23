@@ -179,19 +179,26 @@ footer {
 /* Project Detail Page Additions */
 /* ============================= */
 
-/* Hero banner */
+.hero-wrapper {
+    text-align: center;  /* centers inline-block children */
+}
+
 .project-hero {
-    max-height: 400px; /* limit the height */
-    height: 100%;       /* fill the width of its container */
-    object-fit: contain; /* scale the image proportionally */
+    display: inline-block;
+    margin: 20px 0;        /* vertical spacing only */
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    overflow: hidden;
+    text-align: center;    /* centers image inside container */
 }
 
 .project-hero img {
-    height: 100%;
-    width: auto;
     display: block;
+    max-width: 100%;
+    max-height: 750px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
 }
 
 /* Summary section (quick bullets, role, tools) */
