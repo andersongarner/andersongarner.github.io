@@ -107,33 +107,65 @@ h2 {
     box-shadow: 0 12px 20px rgba(0,0,0,0.3);
 }
 
-/* Foundational Work */
-.foundational {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    padding: 20px;
-    margin-bottom: 30px;
+/* Section container */
+#foundational {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
-.foundational img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    margin-top: 10px;
-    border-radius: 15px;
+#foundational h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Grid wrapper */
+.foundational-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 1.5rem; /* spacing between cards */
+}
+
+/* Card links */
+.foundational-link {
+  display: block;       /* makes the link fill the grid cell */
+  height: 100%;         /* crucial: ensures card stretches fully */
+}
+
+/* Card styling */
+.foundational {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* no space-between, removes extra whitespace */
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .foundational:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.3);
 }
+
+/* Images */
+.foundational img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+/* Responsive: single column on smaller screens */
+@media (max-width: 768px) {
+  .foundational-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
 
 /* Skills */
 .skills-list {
