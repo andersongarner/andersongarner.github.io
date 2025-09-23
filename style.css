@@ -49,6 +49,8 @@ h2 {
     text-align: center;
     margin-bottom: 40px;
     color: #1e2a38;
+    border-bottom: 2px solid #E57200;
+    padding-bottom: 5px;
 }
 
 /* Make links block-level */
@@ -214,7 +216,7 @@ footer {
 
 .project-summary h2 {
     margin-top: 0;
-    color: #E57200;
+    color: #1e2a38;
 }
 
 .project-summary ul {
