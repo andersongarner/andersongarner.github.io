@@ -182,15 +182,15 @@ footer {
 /* Hero banner */
 .project-hero {
     max-height: 400px; /* limit the height */
-    width: 100%;       /* fill the width of its container */
+    height: 100%;       /* fill the width of its container */
     object-fit: contain; /* scale the image proportionally */
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .project-hero img {
-    width: 100%;
-    height: auto;
+    height: 100%;
+    width: auto;
     display: block;
 }
 
