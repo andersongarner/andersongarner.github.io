@@ -3,21 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tetris 3D | Anderson Garner</title>
+  <title>Tetris – Anderson Garner</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <header>
-    <h1>Traffic Optimization Project</h1>
-    <a href="../index.html">← Back to Portfolio</a>
-  </header>
 
-  <section>
-    <img src="../images/tetris3d.png" alt="Tetris">
-    <p>
-      Class project recreating tetris, but with three dimensional tetrimino game pieces that change orientation to add visual appeal.
-    </p>
-    <p>Additional details, data, and images can go here.</p>
+<header class="hero-header">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Tetris - Python</h1>
+      <p>Programmer</p>
+      <a href="../index.html/" class="download-button">Back to Home</a>
+    </div>
+  </div>
+</header>
+
+<div class="hero-wrapper">
+  <section class="project-hero">
+    <img src="../images/tetris3d.png" alt="3D Tetris">
+    <p></p>
+    <a href="../files/Tetris/final_project_anderson_garner_zyf5jh_mac_mason_hvv9dc.zip" download class="download-button">
+    Download Here
+    </a>
+    <p>Note: You must have python and the correct libraries installed.</p>
   </section>
+</div>
+
+<section class="project-summary">
+  <h2>Project Overview</h2>
+  <p>
+    Final project for college Intro to Programming class. Programmed a version of Tetris using the Super Rotation System consistent with the Tetris Guideline. Improved visual appeal by making the blocks three dimensional. 
+  </p>
+  <ul>
+    <li><strong>Role:</strong> Lead Programmer</li>
+    <li><strong>Tools:</strong> Python, PyGame</li>
+  </ul>
+</section>
+
+<section class="project-details">
+
+  <h2>Challenge</h2>
+  <p>
+    A 2D game engine was provided and required to be used, so any three dimensional graphics objects had to be created using this engine. Due to the slow speed of python, and the architecture of the engine, the number of polygons that can be drawn per second is very limited. When changing the rotation of the 3D viewport, the shapes of polygons changes, and as such they must be redrawn.
+  </p>
+
+  <h2>Design</h2>
+  <p>
+    In order to use as few polygons as possible, the backsides of the tetris blocks do not exist. The view is limited to only the front of the board, both for gameplay purposes and so the player cannot see the missing backs.
+    A per-pixel z buffer would be too slow, so a z-buffer was made that utilized the centroid of the polygons instead. This works well enough to ensure the nearer polygons are drawn last, so they appear correctly.
+    Slight color changes simulate light and shadow, and a ghost block was added to improve playability by lightening the colors of the block currently being controlled and placing it as far down as it will go.
+  </p>
+</section>
+
+<footer>
+  <p>Charlottesville, VA | (863) 712-5400 | <a href="mailto:zyf5jh@virginia.edu">Email</a> | <a href="https://www.linkedin.com/in/andersongarner">LinkedIn</a></p>
+  <p>&copy; 2025 Anderson Garner</p>
+</footer>
+
 </body>
 </html>
