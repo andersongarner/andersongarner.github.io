@@ -9,26 +9,104 @@
 </head>
 <body>
 
+<nav class="topnav">
+  <div class="brand">
+    <span class="mark">AG</span>
+    Anderson Garner
+  </div>
+  <div class="topnav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#press">Press</a>
+    <a href="#foundational">Foundational</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="files/Anderson_Garner_Resume.pdf" class="back-link">Résumé</a>
+</nav>
+
 <header class="hero-header">
   <div class="hero-content">
     <img src="images/Anderson_Garner.jpg" alt="Anderson Garner">
     <div class="hero-text">
+      <span class="hero-eyebrow">Aerospace Engineering · UVA</span>
       <h1>Anderson Garner</h1>
-      <p>Aerospace Engineering Student at UVA</p>
-      <a href="../files/Anderson_Garner_Resume.pdf" class="download-button">View My Resume</a>
+      <p>Fourth-year Aerospace Engineering student building flight hardware — from active airbrakes systems to CAD, FEA, and CFD work that's flown and won.</p>
+      <div class="hero-cta">
+        <a href="files/Anderson_Garner_Resume.pdf" class="download-button">View My Résumé</a>
+        <a href="#projects" class="ghost-button">See Projects</a>
+      </div>
     </div>
   </div>
 </header>
 
 <section id="about">
+  <span class="eyebrow">Profile</span>
   <h2>About Me</h2>
   <div class="about-box">
-    <p>Hello! I’m Anderson Garner, a third year Aerospace Engineering student at UVA with experience in rocketry, CAD modeling, and FEA/CFD simulations. I enjoy working to bring complex engineering projects from concept to competition, focusing on practical and innovative solutions. Passionate about hands-on engineering, I combine technical skills in SolidWorks, ANSYS, and programming with strong project management and leadership experience.</p>
+    <p>Hello! I'm Anderson Garner, a fourth year Aerospace Engineering student at UVA with experience in rocketry, CAD modeling, and FEA/CFD simulations. I enjoy working to bring complex engineering projects from concept to competition, focusing on practical and innovative solutions. Passionate about hands-on engineering, I combine technical skills in SolidWorks, ANSYS, and programming with strong project management and leadership experience.</p>
   </div>
 </section>
 
+<div class="section-divider"><span class="tick"></span></div>
+
+<section id="skills">
+    <span class="eyebrow">Capabilities</span>
+    <h2>Skills</h2>
+    <div class="skills-list">
+        <div class="skill">SolidWorks CSWA</div>
+        <div class="skill">AutoCAD</div>
+        <div class="skill">ANSYS Mechanical (FEA)</div>
+        <div class="skill">ANSYS Fluent (CFD)</div>
+        <div class="skill">Rapid Prototyping, Waterjet, Lathe, Manual Mill, 3D Printing</div>
+        <div class="skill">Python, C++, Java, VB.net</div>
+        <div class="skill">Project Management & Leadership</div>
+    </div>
+</section>
+
+<div class="section-divider"><span class="tick"></span></div>
+
 <section id="projects">
+    <span class="eyebrow">Selected Work</span>
     <h2>Projects</h2>
+<a href="projects/chief_engineer.html" class="project-link">
+    <div class="project">
+        <div class="project-image">
+            <img src="images/sabre_iv_indev.png" alt="Sabre IV — in development for IREC 2027">
+        </div>
+        <div class="divider"></div>
+        <div class="project-text">
+            <h3>UVA Rocketry – Chief Engineer / Vice President (6/26–Present)</h3>
+            <p>Directing technical execution across an 80+ member team, setting engineering standards, and mentoring student engineers through design, analysis, and testing.</p>
+            <p>Sabre IV is currently in development for IREC 2027.</p>
+            <div class="tag-row">
+                <span class="tag">Systems Integration</span>
+                <span class="tag">CAD / FEA / CFD</span>
+                <span class="tag">Team Leadership</span>
+            </div>
+        </div>
+    </div>
+</a>
+
+<a href="projects/sabre3.html" class="project-link">
+    <div class="project">
+        <div class="project-image">
+            <img src="images/sabre_iii_ab.png" alt="Sabre III rocket on the launch pad">
+        </div>
+        <div class="divider"></div>
+        <div class="project-text">
+            <h3>UVA Rocketry – Sabre III Airbrakes Lead (2025–2026)</h3>
+            <p>Returned as Airbrakes Sub-team Lead for an entirely new rocket, redesigning the active drag system around a novel winder-based deployment mechanism.</p>
+            <p>Refined onboard apogee prediction to within 10 ft of target altitude in simulation, ahead of the 2026 IREC competition.</p>
+            <div class="tag-row">
+                <span class="tag">SolidWorks</span>
+                <span class="tag">RocketPy</span>
+                <span class="tag">Systems Engineering</span>
+            </div>
+        </div>
+    </div>
+</a>
+
 <a href="projects/airbrakes.html" class="project-link">
     <div class="project">
         <div class="project-image">
@@ -36,9 +114,86 @@
         </div>
         <div class="divider"></div>
         <div class="project-text">
-            <h3>UVA Rocketry – Airbrakes Sub-team Lead (8/24–Present)</h3>
+            <h3>UVA Rocketry – Airbrakes Sub-team Lead (2024-2025)</h3>
             <p>Designed key components of the airbrakes system that contributed to winning 1st Place in the 10k COTS category at IREC 2025.</p>
             <p>Currently managing a 29-member sub-team to develop a lighter, stronger, and more cost-effective design for upcoming competitions.</p>
+            <div class="tag-row">
+                <span class="tag">SolidWorks</span>
+                <span class="tag">ANSYS Fluent</span>
+                <span class="tag">RocketPy</span>
+                <span class="tag">Altium Designer</span>
+            </div>
+        </div>
+    </div>
+</a>
+
+<a href="projects/vortex_generator.html" class="project-link">
+    <div class="project">
+        <div class="project-image">
+            <img src="images/vortex_generator_tunnel.jpg" alt="Modular airfoil with vortex generators in a wind tunnel">
+        </div>
+        <div class="divider"></div>
+        <div class="project-text">
+            <h3>Vortex Generator Geometry &amp; Airfoil Stall Characteristics</h3>
+            <p>Co-authored a wind tunnel + CFD study on vortex generator size and placement, testing 90 configurations on a modular NACA 4410 airfoil.</p>
+            <p>Found the initial size/position hypothesis disproven, and used a Kriging surrogate model to identify an optimal configuration reaching a modeled L/D of 56.99.</p>
+            <div class="tag-row">
+                <span class="tag">ANSYS Fluent</span>
+                <span class="tag">Wind Tunnel Testing</span>
+            </div>
+        </div>
+    </div>
+</a>
+
+<a href="projects/supersonic_flow.html" class="project-link">
+    <div class="project">
+        <div class="project-image">
+            <img src="images/supersonic_shadowgraph.jpg" alt="Shadowgraph image of shock waves around a wedge test article">
+        </div>
+        <div class="divider"></div>
+        <div class="project-text">
+            <h3>Supersonic Wind Tunnel Flow Characterization (5/26)</h3>
+            <p>Characterized compressible flow in UVA's supersonic blowdown wind tunnel, validating blowdown models within ~11% of experimental timing.</p>
+            <p>Cross-validated Mach number across three independent methods using pressure taps, nozzle geometry, and shadowgraph shock angles.</p>
+            <div class="tag-row">
+                <span class="tag">Compressible Flow</span>
+                <span class="tag">Shadowgraphy</span>
+            </div>
+        </div>
+    </div>
+</a>
+
+<a href="projects/apache_rotor_materials.html" class="project-link">
+    <div class="project">
+        <div class="project-image">
+            <img src="images/apache_rotor_materials.jpg" alt="ANSYS Granta materials selection chart">
+        </div>
+        <div class="divider"></div>
+        <div class="project-text">
+            <h3>Material Selection for AH-64 Apache Rotor Blades (12/25)</h3>
+            <p>Performed ANSYS Granta analysis to select rotor blade materials against yield strength, stiffness, fatigue, and cost constraints.</p>
+            <p>Selected PEEK/IM carbon fiber composite as the optimal material via four derived merit indices.</p>
+            <div class="tag-row">
+                <span class="tag">ANSYS Granta</span>
+                <span class="tag">Materials Selection</span>
+            </div>
+        </div>
+    </div>
+</a>
+
+<a href="projects/thermal_expansion.html" class="project-link">
+    <div class="project">
+        <div class="project-image">
+            <img src="images/thermal_expansion_results.jpg" alt="Length vs temperature plots for aluminum specimens">
+        </div>
+        <div class="divider"></div>
+        <div class="project-text">
+            <h3>Thermal Expansion of Aluminum</h3>
+            <p>Measured the linear thermal expansion of 6061-T6 aluminum by cycling samples between dry-ice cooling and boiling-water heating.</p>
+            <div class="tag-row">
+                <span class="tag">Materials Testing</span>
+                <span class="tag">Data Analysis</span>
+            </div>
         </div>
     </div>
 </a>
@@ -53,6 +208,11 @@
             <h3>Improving Local School Traffic (1/24–5/24)</h3>
             <p>Developed software to simulate integration with the Veracross student information system, implementing a raffle-based carpool system.</p>
             <p>Built a Python backend to query a parent database and display optimized carpool matches on an interactive map.</p>
+            <div class="tag-row">
+                <span class="tag">Python</span>
+                <span class="tag">VB.NET</span>
+                <span class="tag">GIS</span>
+            </div>
         </div>
     </div>
 </a>
@@ -66,6 +226,9 @@
         <div class="project-text">
             <h3>Accessible Arm Brace (8/23–11/23)</h3>
             <p>Designed a SolidWorks assembly for an assistive technology project focused on improving comfort and usability compared to conventional arm braces.</p>
+            <div class="tag-row">
+                <span class="tag">SolidWorks</span>
+            </div>
         </div>
     </div>
 </a>
@@ -79,59 +242,100 @@
         <div class="project-text">
             <h3>3D Tetris Blocks (1/24–5/24)</h3>
             <p>Programmed a Python-based version of Tetris conforming to the official Tetris guidelines, building a simple 3D game engine by extending an existing 2D game engine.</p>
+            <div class="tag-row">
+                <span class="tag">Python</span>
+                <span class="tag">PyGame</span>
+            </div>
         </div>
     </div>
 </a>
 </section>
 
+<div class="section-divider"><span class="tick"></span></div>
+
+<section id="press">
+  <span class="eyebrow">Media Coverage</span>
+  <h2>In the Press</h2>
+  <div class="press-strip">
+    <div class="press-card">
+      <div class="press-image">
+        <img src="images/TeamPictureWithAwards_0.jpg" alt="UVA Engineering Rocketry team with their IREC awards">
+      </div>
+      <div class="press-body">
+        <span class="press-outlet">UVA Engineering</span>
+        <h3>UVA Engineering Rocketry Soars at IREC</h3>
+        <span class="press-date">June 24, 2025</span>
+        <p>Coverage of the team's first-place finish in the 10K COTS category and second-place overall showing at the 2025 IREC competition.</p>
+        <a href="https://engineering.virginia.edu/news-events/news/uva-engineering-rocketry-soars-irec" class="press-link" target="_blank" rel="noopener">Read the story ↗</a>
+      </div>
+    </div>
+    <div class="press-card">
+      <div class="press-image">
+        <img src="images/Inline-01-RocketryContest_Contributed.jpg" alt="Anderson Garner and teammates carrying the Sabre III rocket to launch control">
+      </div>
+      <div class="press-body">
+        <span class="press-outlet">UVA Today</span>
+        <h3>Rocket Revival: UVA Team Shoots for Second Straight Title</h3>
+        <span class="press-date">April 17, 2026</span>
+        <p>A behind-the-scenes look at the team's title defense, featuring Anderson fitting the airbrake computer ahead of the 2026 competition.</p>
+        <a href="https://news.virginia.edu/content/rocket-revival-uva-team-shoots-second-straight-title" class="press-link" target="_blank" rel="noopener">Read the story ↗</a>
+      </div>
+    </div>
+    <div class="press-card">
+      <div class="press-image">
+        <img src="images/Header-SF-NIB-Rocketry-JU-MM.jpg" alt="Collage of photos from the UVA rocketry team's competition">
+      </div>
+      <div class="press-body">
+        <span class="press-outlet">UVA Today</span>
+        <h3>News in Brief: UVA Rocketry Team Earns Another National Honor</h3>
+        <span class="press-date">July 8, 2026</span>
+        <p>The team's onboard flight footage took first place at the 2026 IREC, with the technical report placing second overall.</p>
+        <a href="https://news.virginia.edu/content/news-brief-uva-rocketry-team-earns-another-national-honor" class="press-link" target="_blank" rel="noopener">Read the story ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"><span class="tick"></span></div>
 
 <section id="foundational">
+  <span class="eyebrow">Where It Started</span>
   <h2>Foundational Work</h2>
 
   <div class="foundational-grid">
     <a href="projects/lunar_lander.html" class="foundational-link">
       <div class="foundational">
+        <img src="images/lunar_lander.jpg" alt="Lunar Lander Game">
         <h3>Lunar Lander Game (1/21–5/21)</h3>
         <p>Created a physics-based lunar lander simulation in VB.net, applying fundamental principles of physics, graphics, and control systems.</p>
-        <img src="images/lunar_lander.jpg" alt="Lunar Lander Game">
       </div>
     </a>
 
     <a href="projects/robotics.html" class="foundational-link">
       <div class="foundational">
+        <img src="images/robotics.jpeg" alt="High School Robotics">
         <h3>High School Robotics (5/18–8/21)</h3>
         <p>Designed, built, and programmed a VEX competition robot, gaining hands-on experience in the engineering design process, automation, and CAD. Earned SolidWorks CSWA certification during this time.</p>
-        <img src="images/robotics.jpeg" alt="High School Robotics">
       </div>
     </a>
 
     <a href="projects/harvard_data_vis.html" class="foundational-link">
       <div class="foundational">
+        <img src="images/harvard_data_vis.JPG" alt="Image of an interactive map">
         <h3>Harvard Pre-College Data Visualization Class (Summer 2020)</h3>
         <p>Learned python data visualization using Jupyter notebook, MatPlotLib, Pandas, etc.</p>
-        <img src="images/harvard_data_vis.JPG" alt="Image of an interactive map">
       </div>
     </a>
   </div>
 </section>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
-        <div class="skill">SolidWorks CSWA</div>
-        <div class="skill">AutoCAD</div>
-        <div class="skill">ANSYS Mechanical (FEA)</div>
-        <div class="skill">ANSYS Fluent (CFD)</div>
-        <div class="skill">CNC, Waterjet, Lathe, 4-Axis Mill, 3D Printing</div>
-        <div class="skill">Python, C++, Java, VB.net</div>
-        <div class="skill">Project Management & Leadership</div>
-    </div>
-</section>
+<div class="section-divider"><span class="tick"></span></div>
 
 <section id="contact">
+  <span class="eyebrow">Get In Touch</span>
   <h2>Contact Me</h2>
   <div class="contact-box">
-    <p>Charlottesville, VA | (863) 712-5400 | zyf5jh@virginia.edu | linkedin.com/in/andersongarner
+    <p>Charlottesville, VA &nbsp;|&nbsp; (863) 712-5400 &nbsp;|&nbsp; zyf5jh@virginia.edu &nbsp;|&nbsp; linkedin.com/in/andersongarner</p>
 
     <div class="contact-links">
         <a href="tel:+18637125400" class="contact-link">
@@ -163,8 +367,6 @@
     </div>
   </div>
 </section>
-
-
 
 <footer>
     <p>Charlottesville, VA | (863) 712-5400 | <a href="mailto:zyf5jh@virginia.edu">Email</a> | <a href="https://www.linkedin.com/in/andersongarner">LinkedIn</a></p>
