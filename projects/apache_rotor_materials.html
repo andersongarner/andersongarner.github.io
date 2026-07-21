@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apache Rotor Material Selection – Anderson Garner</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="brand">
+    <span class="mark">AG</span>
+    Anderson Garner
+  </div>
+  <a href="../index.html" class="back-link">&larr; Back to Home</a>
+</nav>
+
+<header class="hero-header">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Material Selection for AH-64 Apache Rotor Blades</h1>
+      <p>MAE 3610 · Materials Science Team Project · December 2025</p>
+    </div>
+  </div>
+</header>
+
+<div class="hero-wrapper">
+  <section class="project-hero">
+    <img src="../images/apache_rotor_materials.jpg" alt="ANSYS Granta yield strength vs density material selection chart">
+  </section>
+</div>
+
+<section class="project-summary">
+  <h2>Project Overview</h2>
+  <p>
+    This team project used ANSYS Granta materials selection software to identify the best candidate materials
+    for the AH-64 Apache helicopter's main rotor blades, balancing yield strength, stiffness, fatigue life,
+    fracture toughness, and cost against the extreme aerodynamic and centrifugal loads the rotor experiences
+    in flight.
+  </p>
+  <ul>
+    <li><strong>Role:</strong> Performed the ANSYS Granta materials analysis; evaluated design constraints and engineering considerations</li>
+    <li><strong>Tools:</strong> ANSYS Granta, materials selection charts, merit-index derivation</li>
+    <li><strong>Key Outcome:</strong> Selected PEEK/IM carbon fiber composite as the optimal rotor blade material</li>
+    <li><strong>Team:</strong> Rani Altarazi, Anderson Garner, Lukas Kubilius, Natan Mengiste, Chase O'Malley</li>
+  </ul>
+</section>
+
+<section class="project-details">
+  <h2>Design Requirements</h2>
+  <p>
+    The Apache's main rotor converts engine power into lift while enduring large, fluctuating bending and
+    centrifugal loads — so the material needed high yield strength, high stiffness (to resist deformation and
+    maintain aerodynamic shape), high fatigue strength across millions of loading cycles, and high fracture
+    toughness to keep small imperfections from propagating into blade failure. Environmental resistance to wide
+    temperature swings, corrosion, and erosion rounded out the criteria.
+  </p>
+  <p>
+    Working from the Apache's published rotor dimensions and operating conditions, the team derived a target
+    minimum yield strength of 847.5 MPa (1.5× the calculated 565 MPa maximum combined stress at the blade root)
+    and a minimum stiffness of 75 GPa.
+  </p>
+
+  <h2>Screening with ANSYS Granta</h2>
+  <p>
+    Applying these constraints in ANSYS Granta eliminated entire material families — plastics, technical
+    ceramics, and PCB laminates — right away. Plotting yield strength, Young's modulus, and fatigue strength
+    against density progressively narrowed the field from a broad set of metals and composites down to carbon
+    fiber composites, fiber-reinforced aluminum, titanium alloys, steel alloys, and nickel alloys.
+  </p>
+
+  <h2>Merit Indices</h2>
+  <p>
+    To compare the surviving candidates on equal footing, the team derived four merit indices from first
+    principles: yield strength versus cost per volume, yield strength versus density, stiffness versus density,
+    and fatigue strength versus density. Across all four, carbon fiber composites consistently outperformed the
+    metal alloys — offering comparable or better strength and stiffness at a fraction of the density, which
+    matters directly for rotor weight, agility, and fuel efficiency.
+  </p>
+
+  <h2>Final Selection &amp; Manufacturing</h2>
+  <p>
+    PEEK/IM carbon fiber met every structural and environmental requirement while offering the lowest density
+    of any viable candidate. Because it's supplied as sheet or tape, the team recommended autoclave molding over
+    faster press-molding alternatives — it's slower and more expensive, but delivers the highest fiber-volume
+    fraction, lowest void content, and most accurate reproduction of the blade's twist and taper, all of which
+    directly improve fatigue life and structural reliability for a component where failure isn't an option.
+  </p>
+</section>
+
+<footer>
+  <p>Charlottesville, VA | (863) 712-5400 | <a href="mailto:zyf5jh@virginia.edu">Email</a> | <a href="https://www.linkedin.com/in/andersongarner">LinkedIn</a></p>
+  <p>&copy; 2025 Anderson Garner</p>
+</footer>
+
+</body>
+</html>
